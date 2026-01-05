@@ -1,0 +1,5 @@
+{
+  "name": "Marrify - A Musical Wedding Invitation",
+  "description": "A Spotify-themed wedding invitation application featuring a personalized 'playlist' of the couple's big day, interactive RSVP, and an AI-powered song suggestion assistant.",
+  "requestFramePermissions": []
+}
