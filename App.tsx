@@ -6,6 +6,7 @@ import TrackList from './components/TrackList';
 import RSVPForm from './components/RSVPForm';
 import GiftSection from './components/GiftSection';
 import VideoOverlay from './components/VideoOverlay';
+import InvitationScroll from './components/InvitationScroll';
 import { Icons, COLORS } from './constants';
 
 const App: React.FC = () => {
@@ -53,142 +54,139 @@ const App: React.FC = () => {
           <div className="flex items-center gap-2">
             <button 
               onClick={() => setActiveSection('rsvp')}
-              className="bg-white text-black text-sm font-bold py-1 px-4 rounded-full hover:scale-105 transition-transform"
+              className="bg-[#1DB954] text-black text-sm font-black py-2 px-6 rounded-full hover:scale-105 transition-transform"
             >
-              RSVP Now
+              Hadir? Kabarin disini!
             </button>
-            <button className="w-8 h-8 rounded-full bg-black flex items-center justify-center">
-              <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-[#1DB954] to-[#1ed760] flex items-center justify-center text-[10px] font-bold">DE</div>
+            <button className="w-10 h-10 rounded-full bg-black flex items-center justify-center border border-white/10 overflow-hidden">
+               <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=100" className="w-full h-full object-cover" alt="Profile" />
             </button>
           </div>
         </header>
 
         {/* Hero Section */}
-        <div className="relative pt-24 pb-12 px-8 bg-gradient-to-b from-[#1DB95444] to-transparent">
-          <div className="flex flex-col md:flex-row items-end gap-6">
+        <div className="relative pt-28 pb-12 px-8 bg-gradient-to-b from-[#1DB95455] to-transparent">
+          <div className="flex flex-col md:flex-row items-end gap-10">
             <div 
               onClick={handlePlayVideo}
-              className="group cursor-pointer w-48 h-48 md:w-60 md:h-60 shadow-[0_8px_40px_rgba(0,0,0,0.5)] flex-shrink-0 bg-[#282828] rounded-md overflow-hidden relative"
+              className="group cursor-pointer w-56 h-56 md:w-72 md:h-72 shadow-[0_25px_60px_rgba(0,0,0,0.8)] flex-shrink-0 bg-[#282828] rounded-[2rem] overflow-hidden relative ring-4 ring-white/5"
             >
               <img 
-                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=600" 
+                src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=800" 
                 alt="Dhea & Emil Wedding" 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1500ms]"
               />
-              <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
-                <div className="w-16 h-16 bg-[#1DB954] rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all shadow-2xl">
+              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors flex items-center justify-center">
+                <div className="w-20 h-20 bg-[#1DB954] rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 scale-75 group-hover:scale-100 transition-all shadow-[0_0_30px_rgba(29,185,84,0.6)]">
                   <Icons.Play />
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-2">
-              <span className="text-xs font-bold uppercase tracking-widest md:text-sm flex items-center gap-2">
-                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-[#1DB954]"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                Wedding Invitation
-              </span>
-              <h1 className="text-4xl md:text-7xl lg:text-8xl font-black tracking-tighter mb-4 leading-tight">
-                Dhea & Emil <br/> Wedding Day
+            <div className="flex flex-col gap-4">
+              <div className="flex items-center gap-2">
+                 <div className="bg-[#1DB954] text-black text-[10px] font-black px-2 py-0.5 rounded tracking-widest uppercase">Special Edition</div>
+                 <span className="text-xs font-black text-white uppercase tracking-[0.3em]">Full Invitation</span>
+              </div>
+              <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-4 leading-[0.9]">
+                Dhea & Emil
               </h1>
-              <div className="flex items-center flex-wrap gap-2 text-sm">
-                <div className="w-6 h-6 rounded-full bg-[#1DB954] flex items-center justify-center text-[10px] font-bold">M</div>
-                <span className="font-bold hover:underline cursor-pointer">Marrify Originals</span>
-                <span className="text-[#B3B3B3]">•</span>
-                <span className="font-bold text-white">2025 Release</span>
-                <span className="text-[#B3B3B3]">•</span>
-                <span className="text-white font-medium">October 25, 2025</span>
-                <span className="text-[#B3B3B3]">•</span>
+              <div className="flex items-center flex-wrap gap-3 text-sm font-bold">
+                <div className="flex items-center gap-2 text-[#1DB954]">
+                   <svg viewBox="0 0 24 24" className="w-5 h-5 fill-current"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                   <span>Marrify Verified</span>
+                </div>
+                <span className="text-white/40">•</span>
+                <span className="text-white">2026 Season</span>
+                <span className="text-white/40">•</span>
+                <span className="text-[#B3B3B3]">Oct 25, 2026</span>
+                <span className="text-white/40">•</span>
                 <span className="text-[#B3B3B3]">Cukanggalih Kidul</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Content Area */}
-        <div className="px-8 mt-6">
-            <div className="flex items-center gap-8 mb-8">
-                <button 
-                  onClick={handlePlayVideo}
-                  className="w-14 h-14 bg-[#1DB954] rounded-full flex items-center justify-center text-black hover:scale-105 transition-transform shadow-lg"
-                >
-                    <Icons.Play />
-                </button>
-                <button className="text-[#B3B3B3] hover:text-[#1DB954] transition-colors"><Icons.Heart filled /></button>
-                <button 
-                  onClick={() => setActiveSection('rsvp')}
-                  className="text-[#B3B3B3] hover:text-white transition-colors flex items-center gap-2"
-                >
-                    <svg viewBox="0 0 24 24" className="w-8 h-8 fill-current"><path d="M12 3a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zm6.5 0a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM16 3a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" transform="rotate(90 12 12)"/></svg>
-                </button>
-            </div>
+        {/* Action Bar */}
+        <div className="px-8 mt-12 flex items-center gap-10">
+            <button 
+              onClick={handlePlayVideo}
+              className="w-16 h-16 bg-[#1DB954] rounded-full flex items-center justify-center text-black hover:scale-110 active:scale-95 transition-all shadow-[0_0_30px_rgba(29,185,84,0.4)]"
+            >
+                <Icons.Play />
+            </button>
+            <button className="text-[#1DB954] hover:scale-125 transition-all"><Icons.Heart filled /></button>
+            <button 
+              onClick={() => setActiveSection('library')}
+              className="bg-white/10 hover:bg-white/20 px-8 py-3 rounded-full font-black text-sm tracking-widest uppercase transition-all"
+            >
+                View Album Details
+            </button>
+        </div>
 
+        {/* Content Area */}
+        <div className="px-8 mt-16">
             {activeSection === 'home' && (
-                <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                <div className="animate-in fade-in slide-in-from-bottom-8 duration-700">
                   <section>
-                    <div className="flex items-center justify-between mb-4">
-                      <h2 className="text-2xl font-bold">Wedding Tracklist</h2>
-                      <span className="text-xs font-bold text-[#B3B3B3] uppercase tracking-widest cursor-pointer hover:underline">See itinerary</span>
+                    <div className="flex items-center justify-between mb-8">
+                      <h2 className="text-3xl font-black">Our Journey Tracklist</h2>
                     </div>
                     <TrackList />
                   </section>
                   
-                  {/* Digital Envelope / Gift Section */}
-                  <section>
-                    <GiftSection />
-                  </section>
-                  
-                  <section className="mt-12 pb-32">
-                    <h2 className="text-2xl font-bold mb-4">About the Couple</h2>
-                    <div className="bg-[#181818] p-8 rounded-lg border border-[#282828] relative overflow-hidden group">
+                  <section className="mt-32 pb-48">
+                    <h2 className="text-3xl font-black mb-10">Message from Artists</h2>
+                    <div className="bg-[#181818] p-12 md:p-20 rounded-[4rem] border border-white/5 relative overflow-hidden group max-w-5xl">
                       <div className="relative z-10">
-                        <p className="text-[#B3B3B3] leading-relaxed max-w-2xl text-lg italic">
-                          "Our story isn't just a romance; it's a symphony. We've spent years composing the perfect melody together, and on October 25th, we're finally performing our grand finale as singles and our debut as a couple. Join us at Cukanggalih Kidul for the celebration of a lifetime."
+                        <p className="text-white font-medium leading-[1.8] text-3xl md:text-4xl italic opacity-90 tracking-tight">
+                          "Bagaikan nada yang saling melengkapi, perjalanan kami adalah tentang menemukan harmoni. Kami tak sabar untuk merayakan peluncuran 'album baru' kehidupan kami bersama Anda semua di Cukanggalih Kidul."
                         </p>
-                        <div className="mt-6 flex items-center gap-4">
-                           <div className="w-12 h-12 rounded-full overflow-hidden">
-                              <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=100" alt="D&E" />
+                        <div className="mt-16 flex items-center gap-6">
+                           <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-[#1DB954] shadow-2xl">
+                              <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=200" alt="D&E" />
                            </div>
                            <div>
-                              <p className="font-bold text-white">Dhea & Emil</p>
-                              <p className="text-xs text-[#B3B3B3]">The Lead Artists</p>
+                              <p className="font-black text-3xl text-white">Dhea & Emil</p>
+                              <p className="text-[#1DB954] font-black uppercase tracking-[0.4em] text-xs">OFFICIALLY VERIFIED</p>
                            </div>
                         </div>
                       </div>
-                      <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#1DB95422] to-transparent pointer-events-none" />
+                      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#1DB95422] to-transparent pointer-events-none" />
                     </div>
                   </section>
-                </div>
-            )}
-
-            {activeSection === 'rsvp' && (
-                <div className="pb-32 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                    <RSVPForm />
                 </div>
             )}
 
             {activeSection === 'library' && (
-                <div className="pb-32 flex flex-col items-center justify-center min-h-[400px] text-center animate-in fade-in duration-500">
-                    <div className="w-20 h-20 bg-[#282828] rounded-full flex items-center justify-center mb-6">
-                        <Icons.Library />
-                    </div>
-                    <h2 className="text-2xl font-bold mb-2">Our Love Story</h2>
-                    <p className="text-[#B3B3B3] max-w-md text-lg">The full documentary of Dhea & Emil's journey. Premiere scheduled for the wedding day!</p>
+                <div className="animate-in fade-in duration-1000">
+                    <InvitationScroll />
+                    <GiftSection />
+                    <div className="pb-48" />
+                </div>
+            )}
+
+            {activeSection === 'rsvp' && (
+                <div className="pb-48 animate-in fade-in slide-in-from-bottom-8 duration-700">
+                    <RSVPForm />
                 </div>
             )}
             
             {activeSection === 'search' && (
-                <div className="pb-32 animate-in fade-in duration-500">
-                    <h2 className="text-2xl font-bold mb-6">Explore the Vibes</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                <div className="pb-48 animate-in fade-in duration-700">
+                    <h2 className="text-4xl font-black mb-12">Search for Vibes</h2>
+                    <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
                         {[
-                          { name: 'Ceremony Jazz', color: '#E91429' },
-                          { name: 'Banquet Classics', color: '#1DB954' },
-                          { name: 'Dinner Soul', color: '#27856A' },
-                          { name: 'Afterparty Hits', color: '#1E3264' },
-                          { name: 'Romantic Mix', color: '#8D67AB' }
+                          { name: 'Pop Kita', color: '#E91429', img: 'https://images.unsplash.com/photo-1514525253361-bee8718a300a?auto=format&fit=crop&q=80&w=200' },
+                          { name: 'Jazz Nikah', color: '#1DB954', img: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=200' },
+                          { name: 'Soul Family', color: '#27856A', img: 'https://images.unsplash.com/photo-1493225255756-d9584f8606e9?auto=format&fit=crop&q=80&w=200' },
+                          { name: 'After Party', color: '#1E3264', img: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=200' },
+                          { name: 'Religius', color: '#8D67AB', img: 'https://images.unsplash.com/photo-1471341971476-3ae970cf99c4?auto=format&fit=crop&q=80&w=200' }
                         ].map((genre) => (
-                            <div key={genre.name} className="aspect-square rounded-lg p-4 relative overflow-hidden cursor-pointer group hover:opacity-90 transition-all" style={{ backgroundColor: genre.color }}>
-                                <span className="text-xl md:text-2xl font-bold tracking-tighter">{genre.name}</span>
-                                <div className="absolute -bottom-2 -right-6 w-24 h-24 bg-white/20 rotate-[25deg] group-hover:rotate-[15deg] transition-transform" />
+                            <div key={genre.name} className="aspect-square rounded-3xl p-6 relative overflow-hidden cursor-pointer group shadow-2xl transition-all" style={{ backgroundColor: genre.color }}>
+                                <span className="text-2xl md:text-3xl font-black tracking-tighter leading-none relative z-10">{genre.name}</span>
+                                <div className="absolute -bottom-4 -right-8 w-32 h-32 bg-black/20 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-500 rounded-2xl overflow-hidden">
+                                   <img src={genre.img} className="w-full h-full object-cover grayscale opacity-60" alt={genre.name} />
+                                </div>
                             </div>
                         ))}
                     </div>
@@ -204,18 +202,22 @@ const App: React.FC = () => {
       <Player />
       
       {/* Mobile Nav Overlay */}
-      <div className="md:hidden fixed bottom-24 left-0 right-0 h-16 bg-gradient-to-t from-black to-transparent flex items-center justify-around z-40 px-4">
-        <button onClick={() => setActiveSection('home')} className={`flex flex-col items-center text-[10px] transition-colors ${activeSection === 'home' ? 'text-white' : 'text-[#B3B3B3]'}`}>
+      <div className="md:hidden fixed bottom-28 left-0 right-0 h-16 bg-gradient-to-t from-black via-black to-transparent flex items-center justify-around z-40 px-6 backdrop-blur-md">
+        <button onClick={() => setActiveSection('home')} className={`flex flex-col items-center gap-1 text-[10px] font-black transition-all ${activeSection === 'home' ? 'text-[#1DB954] scale-110' : 'text-[#B3B3B3]'}`}>
             <Icons.Home />
-            <span className="mt-1 font-medium">Home</span>
+            <span>HOME</span>
         </button>
-        <button onClick={() => setActiveSection('search')} className={`flex flex-col items-center text-[10px] transition-colors ${activeSection === 'search' ? 'text-white' : 'text-[#B3B3B3]'}`}>
+        <button onClick={() => setActiveSection('search')} className={`flex flex-col items-center gap-1 text-[10px] font-black transition-all ${activeSection === 'search' ? 'text-[#1DB954] scale-110' : 'text-[#B3B3B3]'}`}>
             <Icons.Search />
-            <span className="mt-1 font-medium">Search</span>
+            <span>SEARCH</span>
         </button>
-        <button onClick={() => setActiveSection('rsvp')} className={`flex flex-col items-center text-[10px] transition-colors ${activeSection === 'rsvp' ? 'text-white' : 'text-[#B3B3B3]'}`}>
+        <button onClick={() => setActiveSection('library')} className={`flex flex-col items-center gap-1 text-[10px] font-black transition-all ${activeSection === 'library' ? 'text-[#1DB954] scale-110' : 'text-[#B3B3B3]'}`}>
+            <Icons.Library />
+            <span>INVITE</span>
+        </button>
+        <button onClick={() => setActiveSection('rsvp')} className={`flex flex-col items-center gap-1 text-[10px] font-black transition-all ${activeSection === 'rsvp' ? 'text-[#1DB954] scale-110' : 'text-[#B3B3B3]'}`}>
             <Icons.Play />
-            <span className="mt-1 font-medium">RSVP</span>
+            <span>RSVP</span>
         </button>
       </div>
     </div>

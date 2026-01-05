@@ -19,7 +19,7 @@ export const Icons = {
   ),
   Search: () => (
     <svg viewBox="0 0 24 24" className="w-6 h-6 fill-current">
-      <path d="M10.533 1.271a9.262 9.262 0 102.828 17.76l4.481 4.481a1 1 0 001.414-1.414l-4.481-4.481a9.262 9.262 0 00-4.242-16.346zm0 2a7.262 7.262 0 11-7.262 7.262 7.262 7.262 0 017.262-7.262z" />
+      <path d="M10.533 1.271a9.262 9.262 0 102.828 17.76l4.481 4.481a1 1 0 001.414-1.414l-4.481-4.481a9.262 9.262 0 00-4.242-16.346zm0 2a7.262 7.262 0 11-7.262 7.262 7.262 0 017.262-7.262z" />
     </svg>
   ),
   Library: () => (
@@ -59,51 +59,55 @@ export const Icons = {
   ),
 };
 
-// Fixed error: Added import for Track above
 export const TRACKS: Track[] = [
   {
     id: '1',
-    title: 'The Grand Ceremony',
-    artist: 'Our Eternal Promise',
-    duration: '02:00:00',
-    imageUrl: 'https://picsum.photos/id/237/400/400',
-    type: 'event',
-    timestamp: 'Saturday, June 14, 2025 • 4:00 PM'
+    title: 'Pertemuan kita',
+    artist: 'Lagu tentang 2 ABG yg bertemu',
+    duration: '03:25',
+    // Seminar photo
+    imageUrl: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=600',
+    type: 'story',
+    timestamp: 'Seminar Nasional Memories'
   },
   {
     id: '2',
-    title: 'Cocktail Hour Mix',
-    artist: 'Cheers to Love',
-    duration: '01:30:00',
-    imageUrl: 'https://picsum.photos/id/102/400/400',
-    type: 'event',
-    timestamp: '5:30 PM'
+    title: 'Masa Pendekatan',
+    artist: 'Harmoni yang terjalin',
+    duration: '04:10',
+    // Forest photo
+    imageUrl: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=600',
+    type: 'story',
+    timestamp: 'Phase 2: Forest Vibes'
   },
   {
     id: '3',
-    title: 'Wedding Banquet Feast',
-    artist: 'A Culinary Journey',
-    duration: '03:00:00',
-    imageUrl: 'https://picsum.photos/id/103/400/400',
-    type: 'event',
-    timestamp: '7:00 PM'
+    title: 'Rumah',
+    artist: 'Tempat hati berlabuh',
+    duration: '03:45',
+    // Beach photo
+    imageUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=600',
+    type: 'story',
+    timestamp: 'Phase 3: Ocean Breeze'
   },
   {
     id: '4',
-    title: 'First Dance (Remastered)',
-    artist: 'Alex & Sam',
-    duration: '04:20',
-    imageUrl: 'https://picsum.photos/id/104/400/400',
+    title: 'Menyatukan 2 Hati',
+    artist: 'Langkah menuju selamanya',
+    duration: '05:00',
+    // Graduation photo
+    imageUrl: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=600',
     type: 'story',
-    timestamp: '9:00 PM'
+    timestamp: 'October 25, 2026'
   },
   {
     id: '5',
-    title: 'Afterparty Beats',
-    artist: 'Late Night Crew',
-    duration: '04:00:00',
-    imageUrl: 'https://picsum.photos/id/106/400/400',
-    type: 'event',
-    timestamp: '10:00 PM'
+    title: 'Dalam Lindungan Allah',
+    artist: 'Doa dalam setiap nada',
+    duration: '04:30',
+    // Mirror Selfie photo
+    imageUrl: 'https://images.unsplash.com/photo-1522071823991-b9676c3014f0?auto=format&fit=crop&q=80&w=600',
+    type: 'story',
+    timestamp: 'Blessings'
   }
 ];
